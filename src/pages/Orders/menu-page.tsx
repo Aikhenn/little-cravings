@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { bakes, formatPrice, menuCategories, type MenuCategoryId } from "@/bakes"
 import { Button, buttonVariants } from "@/components/ui/button"
-import { OrderingHeader } from "@/components/ordering-header"
 import { OrderProgress } from "@/components/order-progress"
 import { useOrder } from "@/order-context"
 import { formatOrderDate, formatShortDate, fulfillmentDetail, pickupWindow } from "@/schedule"
@@ -25,7 +24,6 @@ export function MenuPage() {
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <OrderingHeader skipHref="#menu" skipLabel="Skip to the menu" />
       <main
         id="menu"
         className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 pt-6 pb-10 md:gap-7 md:px-10 md:pt-8 md:pb-12 xl:px-20 xl:pt-10"

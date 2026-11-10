@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { Link } from "react-router-dom"
 import { formatPrice } from "@/bakes"
 import { Button, buttonVariants } from "@/components/ui/button"
-import { OrderingHeader } from "@/components/ordering-header"
 import { OrderProgress } from "@/components/order-progress"
 import { useOrder } from "@/order-context"
 import { formatOrderDate, fulfillmentDetail } from "@/schedule"
@@ -17,10 +16,9 @@ export function CartPage() {
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <OrderingHeader skipHref="#cart" skipLabel="Skip to your cart" />
       <main
         id="cart"
-        className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
+        className="mx-auto flex w-full max-w-360 flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
       >
         <OrderProgress current={3} />
         <div className="flex flex-col gap-3">

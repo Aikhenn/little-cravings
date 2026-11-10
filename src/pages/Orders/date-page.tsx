@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { buttonVariants } from "@/components/ui/button"
-import { OrderingHeader } from "@/components/ordering-header"
 import { OrderProgress } from "@/components/order-progress"
 import { useOrder } from "@/order-context"
 import {
@@ -52,10 +51,9 @@ export function DatePage() {
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <OrderingHeader skipHref="#order-setup" skipLabel="Skip to date and fulfillment" />
       <main
         id="order-setup"
-        className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
+        className="mx-auto flex w-full max-w-360 flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
       >
         <OrderProgress current={1} />
         <div className="flex flex-col gap-3">
@@ -69,7 +67,7 @@ export function DatePage() {
 
         <section className="flex flex-col gap-6 md:gap-7 md:rounded-[20px] md:border md:border-border md:bg-card md:p-7 md:shadow-[0px_8px_28px_0px_rgba(107,71,36,0.04)] xl:p-8">
           <div className="flex flex-col gap-6 md:flex-row md:gap-12">
-            <div className="rounded-[20px] border border-border bg-card p-4 shadow-[0px_8px_28px_0px_rgba(107,71,36,0.04)] md:flex-1 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none xl:max-w-[464px]">
+            <div className="rounded-[20px] border border-border bg-card p-4 shadow-[0px_8px_28px_0px_rgba(107,71,36,0.04)] md:flex-1 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:shadow-none xl:max-w-116">
               <h2 className="text-[15px] font-semibold">Choose a date</h2>
               <div className="mt-5 flex flex-col gap-5">
                 <div className="flex items-center justify-between">
@@ -134,7 +132,7 @@ export function DatePage() {
                         >
                           {day.getDate()}
                           {available && open && !isSelected ? (
-                            <span className="mt-0.5 size-[3px] rounded-full bg-primary" />
+                            <span className="mt-0.5 size-0.75 rounded-full bg-primary" />
                           ) : null}
                         </button>
                       )
@@ -160,7 +158,7 @@ export function DatePage() {
                 type="button"
                 aria-pressed={fulfillment === "delivery"}
                 className={cn(
-                  "flex items-center gap-3 rounded-xl border p-[18px] text-left",
+                  "flex items-center gap-3 rounded-xl border p-4.5 text-left",
                   fulfillment === "delivery" ? "border-primary bg-secondary" : "border-border bg-card",
                 )}
                 onClick={() => setFulfillment("delivery")}
@@ -174,7 +172,7 @@ export function DatePage() {
                 </span>
                 <span
                   className={cn(
-                    "flex size-[18px] items-center justify-center rounded-full border text-[11px] leading-none text-white",
+                    "flex size-4.5 items-center justify-center rounded-full border text-[11px] leading-none text-white",
                     fulfillment === "delivery" ? "border-primary bg-primary" : "border-border bg-card",
                   )}
                 >
@@ -185,7 +183,7 @@ export function DatePage() {
                 type="button"
                 aria-pressed={fulfillment === "pickup"}
                 className={cn(
-                  "flex items-center gap-3 rounded-xl border p-[18px] text-left",
+                  "flex items-center gap-3 rounded-xl border p-4.5 text-left",
                   fulfillment === "pickup" ? "border-primary bg-secondary" : "border-border bg-card",
                 )}
                 onClick={() => setFulfillment("pickup")}
@@ -199,7 +197,7 @@ export function DatePage() {
                 </span>
                 <span
                   className={cn(
-                    "flex size-[18px] items-center justify-center rounded-full border text-[11px] leading-none text-white",
+                    "flex size-4.5 items-center justify-center rounded-full border text-[11px] leading-none text-white",
                     fulfillment === "pickup" ? "border-primary bg-primary" : "border-border bg-card",
                   )}
                 >
@@ -226,10 +224,10 @@ export function DatePage() {
                 <p className="text-xs text-muted-foreground">{fulfillmentDetail(fulfillment)}</p>
               </div>
               <Link
-                to="/menu"
+                to="./menu"
                 className={buttonVariants({
                   className:
-                    "h-[52px] w-full rounded-lg border-[#9a4e35] bg-primary text-sm hover:bg-primary/90 md:w-[200px]",
+                    "h-13 w-full rounded-lg border-[#9a4e35] bg-primary text-sm hover:bg-primary/90 md:w-50",
                 })}
               >
                 View Menu →
