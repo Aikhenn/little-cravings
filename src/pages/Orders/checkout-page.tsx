@@ -4,7 +4,6 @@ import { formatPrice, type OrderLine } from "@/bakes"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { OrderingHeader } from "@/components/ordering-header"
 import { OrderProgress } from "@/components/order-progress"
 import { useOrder } from "@/order-context"
 import { formatOrderDate, fulfillmentDetail, pickupWindow, shopAddress } from "@/schedule"
@@ -65,10 +64,9 @@ export function CheckoutPage() {
 
   return (
     <div className="min-h-svh bg-background text-foreground">
-      <OrderingHeader skipHref="#checkout" skipLabel="Skip to checkout" />
       <main
         id="checkout"
-        className="mx-auto flex w-full max-w-[1440px] flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
+        className="mx-auto flex w-full max-w-360 flex-col gap-6 px-5 pt-6 pb-10 md:gap-8 md:px-10 md:pt-10 md:pb-16 xl:px-52 xl:pt-12"
       >
         <OrderProgress current={4} />
         {placed ? (
