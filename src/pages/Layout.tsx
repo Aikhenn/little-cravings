@@ -9,9 +9,14 @@ const Layout = () => {
   console.log("test ran")
 
   return (
-    <main className='overflow-hidden'>
-      <Header />
-      <Outlet />
+    <main className='flex flex-col h-dvh'>
+      <div className='shrink-0'>
+        <Header />
+      </div>
+
+      <div className='min-h-0 flex-1 overflow-y-auto'>
+        <Outlet />
+      </div>
     </main>
   )
 }

@@ -9,19 +9,19 @@ export default function Header() {
 
   return (
     <header className="border-b border-border bg-background">
-      <div className="flex h-18 items-center justify-between px-5 md:px-10 xl:h-22.5 xl:px-20">
-        <Link to="/" className="font-heading text-[26px] leading-none text-primary sm:text-[32px]">
+      <div className="mx-auto flex min-h-22.5 w-full max-w-360 flex-wrap items-center justify-between gap-x-8 gap-y-4 px-5 py-4 sm:px-8 md:flex-nowrap md:px-10 xl:px-20">
+        <Link to="/" className="order-1 font-heading text-[26px] leading-none text-[#3d2b23] sm:text-[32px]">
           little cravings
         </Link>
 
         <Navigation />
 
         <Link
-          to="/cart"
-          className="inline-flex items-center gap-2 rounded-lg text-[13px] leading-[1.55] text-foreground focus-visible:ring-4 focus-visible:ring-ring focus-visible:outline-none"
+          to="/orders/cart"
+          className="order-2 inline-flex items-center gap-2 rounded-lg text-[13px] leading-[1.55] text-foreground focus-visible:ring-4 focus-visible:ring-ring focus-visible:outline-none md:order-3"
         >
           <img src={shoppingBag} alt="" width={20} height={20} />
-          Cart {count}{count > 0 ? ` · ${formatPrice(total)}`: ''}
+          Cart ({count}){count > 0 ? ` · ${formatPrice(total)}`: ''}
         </Link>
       </div>
 
