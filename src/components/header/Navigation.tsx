@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
 
 const Navigation = () => {
   const links = [
@@ -21,13 +21,14 @@ const Navigation = () => {
   ]
 
   return (
-    <nav>
-      <ul className='flex list-none gap-12'>
+    <nav aria-label="Main navigation" className="order-3 basis-full md:order-2 md:basis-auto">
+      <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[14px] leading-normal sm:gap-x-8">
         {links.map(({to, label}) => (
           <li>
             <NavLink
               to={to}
-              className={({ isActive }) => isActive ? `text-primary/90 font-bold` : ""}
+              end
+              className={({ isActive }) => isActive ? `text-primary font-semibold` : "text-foreground"}
             >
               {label}
             </NavLink>
