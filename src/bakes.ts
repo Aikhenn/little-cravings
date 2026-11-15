@@ -1,9 +1,9 @@
-import brownButterPhoto from "@/assets/brown-butter.jpg"
-import chocolateChunkPhoto from "@/assets/chocolate-chunk.jpg"
-import fudgeBrowniePhoto from "@/assets/fudge-brownie.jpg"
-import lemonSundayPhoto from "@/assets/lemon-sunday.jpg"
-import mixedBoxPhoto from "@/assets/mixed-box.jpg"
-import raspberryCloudPhoto from "@/assets/raspberry-cloud.jpg"
+import brownButterPhoto from "@/assets/home/brown-butter.png"
+import chocolateChunkPhoto from "@/assets/home/chocolate-chunk.png"
+import fudgeBrowniePhoto from "@/assets/home/brownie.png"
+import lemonSundayPhoto from "@/assets/home/lemon-sunday.png"
+import mixedBoxPhoto from "@/assets/home/mixed-box.png"
+import raspberryCloudPhoto from "@/assets/home/raspberry-cloud.png"
 
 export type BakeCategory = "cookies" | "smores" | "brownies" | "other"
 

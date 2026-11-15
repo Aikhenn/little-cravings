@@ -14,23 +14,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --background: #fffcf7;
+  --background: #fbf8f1;
   --foreground: #3d2b23;
   --card: #ffffff;
   --card-foreground: #3d2b23;
   --popover: #fffcf7;
   --popover-foreground: #3d2b23;
-  --primary: #6b4724;
+  --primary: #9a4e35;
   --primary-foreground: #ffffff;
   --secondary: #fff5f3;
   --secondary-foreground: #3d2b23;
   --muted: #f6f1ea;
-  --muted-foreground: #7e6d60;
+  --muted-foreground: #78665b;
   --accent: #f7dcda;
   --accent-foreground: #6b4724;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e9dfd4;
-  --input: #e9dfd4;
+  --border: #e3d9cd;
+  --input: #e3d9cd;
   --ring: #6b4724;
   --faded: #c9bfb5;
   --chart-1: oklch(0.87 0 0);
